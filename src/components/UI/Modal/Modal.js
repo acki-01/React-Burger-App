@@ -3,12 +3,11 @@ import classes from "./Modal.css";
 import Backdrop from "../Backdrop/Backdrop";
 
 class Modal extends Component {
-  shouldComponentUpdate(nextProps, nextArguments) {
-    return nextProps.show !== this.props.show;
-  }
-
-  componentWillUpdate() {
-    console.log("componentWillUpdate");
+  shouldComponentUpdate(nextProps) {
+    return (
+      nextProps.show !== this.props.show ||
+      nextProps.children !== this.props.children
+    );
   }
 
   render() {
