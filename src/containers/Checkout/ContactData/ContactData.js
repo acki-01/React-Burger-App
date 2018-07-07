@@ -35,12 +35,12 @@ class ContactData extends Component {
     axios
       .post("/orders.json", order)
       .then(resp => {
-        this.props.history.push("/");
-        return resp;
-      })
-      .catch(err => console.log(err))
-      .finally(() => {
         this.setState({ loading: false });
+        this.props.history.push("/");
+      })
+      .catch(err => {
+        this.setState({ loading: false });
+        console.log(err);
       });
   };
   render() {
