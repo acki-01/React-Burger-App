@@ -3,10 +3,10 @@ import BuildControl from "./BuildControl/BuildControl";
 import classes from "./BuildControls.css";
 
 const controls = [
-  { label: "Salad", type: "salad" },
   { label: "Bacon", type: "bacon" },
   { label: "Cheese", type: "cheese" },
-  { label: "Meat", type: "meat" }
+  { label: "Meat", type: "meat" },
+  { label: "Salad", type: "salad" }
 ];
 
 const buildControls = props => (
@@ -28,7 +28,7 @@ const buildControls = props => (
       disabled={!props.purchasable}
       onClick={props.ordered}
     >
-      Order now
+      {props.isAuth ? "Order now" : "Sign up to order"}
     </button>
   </div>
 );
