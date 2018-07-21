@@ -2,9 +2,9 @@
 
 import { put } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
-import axios from 'axios';
 
 import * as actions from '../actions';
+import createAuthAxiosInstance from '../../services/axios-auth';
 
 export function* logoutSaga(action) {
     yield localStorage.removeItem('token');
@@ -25,15 +25,13 @@ export function* authUserSaga(action) {
         password: action.password,
         returnSecureToken: true,
     };
-    let url =
-        'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyCnk1x8CengQxyIL7wHQy-TSLpAFpxwM-E';
-
+    let mode = 'SIGNUP';
     if (!action.isSignup) {
-        url =
-            'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyCnk1x8CengQxyIL7wHQy-TSLpAFpxwM-E';
+        mode = 'SIGNIN';
     }
+    let axios = createAuthAxiosInstance(mode);
     try {
-        const response = yield axios.post(url, authData);
+        const response = yield axios.post('', authData);
         const expirationTime = new Date(
             new Date().getTime() + response.data.expiresIn * 1000,
         );

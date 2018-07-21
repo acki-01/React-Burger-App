@@ -1,9 +1,10 @@
 /** @format */
 
 import axios from 'axios';
+import { DB_API } from './api';
 
 const instance = axios.create({
-    baseURL: 'https://react-burger-firebase.firebaseio.com/',
+    baseURL: `${DB_API}`,
 });
 
 export default instance;
