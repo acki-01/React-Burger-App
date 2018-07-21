@@ -3,8 +3,8 @@
 import { put } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
 
-import * as actions from '../actions';
-import createAuthAxiosInstance from '../../services/axios-auth';
+import * as actions from 'store/actions';
+import createAuthAxiosInstance from 'services/axios-auth';
 
 export function* logoutSaga(action) {
     yield localStorage.removeItem('token');

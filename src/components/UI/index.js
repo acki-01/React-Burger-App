@@ -1,9 +1,9 @@
 /** @format */
 
-import Backdrop from './Backdrop/Backdrop';
-import Button from './Button/Button';
-import Input from './Input/Input';
-import Modal from './Modal/Modal';
-import Spinner from './Spinner/Spinner';
+import Backdrop from 'components/UI/Backdrop/Backdrop';
+import Button from 'components/UI/Button/Button';
+import Input from 'components/UI/Input/Input';
+import Modal from 'components/UI/Modal/Modal';
+import Spinner from 'components/UI/Spinner/Spinner';
 
 export { Backdrop, Button, Input, Modal, Spinner };

@@ -6,13 +6,13 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
-import './index.css';
-import App from './containers/App';
-import registerServiceWorker from './registerServiceWorker';
-import burgerBuilderReducer from './store/reducers/burgerBuilder';
-import orderReducer from './store/reducers/order';
-import authReducer from './store/reducers/auth';
-import { watchAuth, watchBurgerBuilder, watchOrder } from './store/sagas';
+import 'index.css';
+import App from 'containers/App';
+import registerServiceWorker from 'registerServiceWorker';
+import burgerBuilderReducer from 'store/reducers/burgerBuilder';
+import orderReducer from 'store/reducers/order';
+import authReducer from 'store/reducers/auth';
+import { watchAuth, watchBurgerBuilder, watchOrder } from 'store/sagas';
 
 const composeEnhancers =
     process.env.NODE_ENV === 'development'

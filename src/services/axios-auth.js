@@ -1,7 +1,7 @@
 /** @format */
 
 import axios from 'axios';
-import { AUTH_API, KEY } from './api';
+import { AUTH_API, KEY } from 'services/api';
 
 const createAuthAxiosInstance = (mode) => {
     let status;

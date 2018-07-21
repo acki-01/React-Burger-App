@@ -5,11 +5,11 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import classes from './App.css';
-import Layout from '../hoc/Layout/Layout';
+import { Layout } from '../hoc';
 import { BurgerBuilder } from '../containers/BurgerBuilder';
 import { Logout } from '../containers/Auth';
 import * as actions from '../store/actions';
-import asyncComponent from '../hoc/asyncComponent/asyncComponent';
+import { asyncComponent } from '../hoc';
 
 const asyncCheckout = asyncComponent(() => {
     return import('../containers/Checkout/Checkout');

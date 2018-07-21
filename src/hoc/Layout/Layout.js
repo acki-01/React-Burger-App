@@ -4,9 +4,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import classes from './Layout.css';
-import { Toolbar } from '../../components/Navigation/';
-import { SideDrawer } from '../../components/Navigation';
+import classes from 'hoc/Layout/Layout.css';
+import { Toolbar } from 'components/Navigation/';
+import { SideDrawer } from 'components/Navigation';
 
 class Layout extends Component {
     state = {

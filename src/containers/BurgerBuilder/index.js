@@ -1,5 +1,5 @@
 /** @format */
 
-import BurgerBuilder from './BurgerBuilder';
+import BurgerBuilder from 'containers/BurgerBuilder/BurgerBuilder';
 
 export { BurgerBuilder };

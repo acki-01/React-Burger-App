@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-import { Burger } from '../../Burger';
-import { Button } from '../../UI';
-import classes from './CheckoutSummary.css';
+import { Burger } from 'components/Burger';
+import { Button } from 'components/UI';
+import classes from 'components/Order/CheckoutSummary/CheckoutSummary.css';
 
 const checkoutSummary = (props) => {
     return (

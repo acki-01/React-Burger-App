@@ -1,7 +1,7 @@
 /** @format */
 
-import Toolbar from './Toolbar/Toolbar';
-import SideDrawer from './SideDrawer/SideDrawer';
-import NavigationItems from './NavigationItems/NavigationItems';
+import Toolbar from 'components/Navigation/Toolbar/Toolbar';
+import SideDrawer from 'components/Navigation/SideDrawer/SideDrawer';
+import NavigationItems from 'components/Navigation/NavigationItems/NavigationItems';
 
 export { Toolbar, SideDrawer, NavigationItems };

@@ -3,15 +3,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { Button } from '../../../components/UI';
-import classes from './ContactData.css';
-import { Spinner } from '../../../components/UI';
-import { Input } from '../../../components/UI';
-import axios from '../../../services/axios-orders';
-import withErrorHandler from '../../../hoc/withErrorHandler/withErrorHandler';
-import * as actions from '../../../store/actions';
-import { updateObject } from '../../../shared/utility';
-import { checkValidity } from '../../../shared/validation';
+import { Button } from 'components/UI';
+import classes from 'containers/Checkout/ContactData/ContactData.css';
+import { Spinner } from 'components/UI';
+import { Input } from 'components/UI';
+import axios from 'services/axios-orders';
+import { withErrorHandler } from 'hoc';
+import * as actions from 'store/actions';
+import { updateObject } from 'shared/utility';
+import { checkValidity } from 'shared/validation';
 
 class ContactData extends Component {
     state = {

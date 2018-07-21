@@ -6,7 +6,7 @@ export {
     initIngredients,
     setIngredients,
     fetchIngredientsFail,
-} from './burgerBuilder';
+} from 'store/actions/burgerBuilder';
 export {
     purchaseBurger,
     purchaseInit,
@@ -17,7 +17,7 @@ export {
     purchaseBurgerStart,
     purchaseBurgerSuccess,
     purchaseBurgerFail,
-} from './order';
+} from 'store/actions/order';
 export {
     auth,
     logout,
@@ -28,4 +28,4 @@ export {
     authSuccess,
     authFail,
     checkAuthTimeout,
-} from './auth';
+} from 'store/actions/auth';

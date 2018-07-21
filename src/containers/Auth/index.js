@@ -1,6 +1,6 @@
 /** @format */
 
-import Auth from './';
-import Logout from './Logout/Logout';
+import Auth from 'containers/Auth';
+import Logout from 'containers/Auth/Logout/Logout';
 
 export { Auth, Logout };

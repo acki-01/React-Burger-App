@@ -1,6 +1,6 @@
 /** @format */
 
-import Order from './';
-import CheckoutSummary from './CheckoutSummary/CheckoutSummary';
+import Order from 'components/Order';
+import CheckoutSummary from 'components/Order/CheckoutSummary/CheckoutSummary';
 
 export { Order, CheckoutSummary };

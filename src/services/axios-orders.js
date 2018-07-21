@@ -1,7 +1,7 @@
 /** @format */
 
 import axios from 'axios';
-import { DB_API } from './api';
+import { DB_API } from 'services/api';
 
 const instance = axios.create({
     baseURL: `${DB_API}`,

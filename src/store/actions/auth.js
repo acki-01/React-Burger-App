@@ -1,6 +1,6 @@
 /** @format */
 
-import * as actionTypes from '../constans/actionTypes';
+import * as actionTypes from 'store/constans/actionTypes';
 
 export const authStart = () => {
     return {

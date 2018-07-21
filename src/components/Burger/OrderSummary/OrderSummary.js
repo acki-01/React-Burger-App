@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import { Button } from '../../UI';
+import { Button } from 'components/UI';
 
 const orderSummary = (props) => {
     const ingredientsSummary = Object.keys(props.ingredients).map((igKey) => {

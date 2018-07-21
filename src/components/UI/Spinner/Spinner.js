@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import classes from './Spinner.css';
+import classes from 'components/UI/Spinner/Spinner.css';
 
 const spinner = () => <div className={classes.Spinner}>Loading...</div>;
 

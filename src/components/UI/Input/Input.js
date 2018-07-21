@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import classes from './Input.css';
+import classes from 'components/UI/Input/Input.css';
 
 const input = (props) => {
     const inputClasses = [classes.InputElement];

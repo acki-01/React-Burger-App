@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import classes from './Backdrop.css';
+import classes from 'components/UI/Backdrop/Backdrop.css';
 
 const backdrop = (props) =>
     props.show ? (

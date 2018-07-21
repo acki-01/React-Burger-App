@@ -1,5 +1,5 @@
 /** @format */
 
-import Orders from './Orders/Orders';
+import Orders from 'containers/Orders/Orders';
 
 export { Orders };

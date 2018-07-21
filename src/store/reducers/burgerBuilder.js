@@ -1,7 +1,7 @@
 /** @format */
 
-import * as actionTypes from '../constans/actionTypes';
-import { updateObject } from '../../shared/utility';
+import * as actionTypes from 'store/constans/actionTypes';
+import { updateObject } from 'shared/utility';
 
 const initialState = {
     ingredients: null,

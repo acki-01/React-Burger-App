@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-import BuildControl from './BuildControl/BuildControl';
-import classes from './BuildControls.css';
+import BuildControl from 'components/Burger/BuildControls/BuildControl/BuildControl';
+import classes from 'components/Burger/BuildControls/BuildControls.css';
 
 const controls = [
     { label: 'Bacon', type: 'bacon' },

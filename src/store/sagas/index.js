@@ -7,10 +7,10 @@ import {
     checkAuthTimeoutSaga,
     authUserSaga,
     authCheckStateSaga,
-} from './auth';
-import { initIngredientsSaga } from './builderBurger';
-import { purchaseBurgerSaga, fetchOrdersSaga } from './order';
-import * as actionTypes from '../constans/actionTypes';
+} from 'store/sagas/auth';
+import { initIngredientsSaga } from 'store/sagas/builderBurger';
+import { purchaseBurgerSaga, fetchOrdersSaga } from 'store/sagas/order';
+import * as actionTypes from 'store/constans/actionTypes';
 
 export function* watchAuth() {
     yield all([
