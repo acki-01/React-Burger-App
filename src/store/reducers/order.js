@@ -1,6 +1,6 @@
 /** @format */
 
-import * as actionTypes from '../actions/actionTypes';
+import * as actionTypes from '../constans/actionTypes';
 import { updateObject } from '../../shared/utility';
 
 const initialState = {

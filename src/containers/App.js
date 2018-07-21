@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 
 import classes from './App.css';
 import Layout from '../hoc/Layout/Layout';
-import BurgerBuilder from '../containers/BurgerBuilder/BurgerBuilder';
-import Logout from '../containers/Auth/Logout/Logout';
+import { BurgerBuilder } from '../containers/BurgerBuilder';
+import { Logout } from '../containers/Auth';
 import * as actions from '../store/actions';
 import asyncComponent from '../hoc/asyncComponent/asyncComponent';
 

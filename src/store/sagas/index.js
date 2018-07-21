@@ -10,7 +10,7 @@ import {
 } from './auth';
 import { initIngredientsSaga } from './builderBurger';
 import { purchaseBurgerSaga, fetchOrdersSaga } from './order';
-import * as actionTypes from '../actions/actionTypes';
+import * as actionTypes from '../constans/actionTypes';
 
 export function* watchAuth() {
     yield all([

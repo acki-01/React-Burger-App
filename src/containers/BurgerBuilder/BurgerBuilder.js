@@ -3,11 +3,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Burger from '../../components/Burger/Burger';
-import BuildControls from '../../components/Burger/BuildControls/BuildControls';
-import Modal from '../../components/UI/Modal/Modal';
-import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
-import Spinner from '../../components/UI/Spinner/Spinner';
+import { Burger } from '../../components/Burger';
+import { BuildControls } from '../../components/Burger';
+import { Modal } from '../../components/UI';
+import { OrderSummary } from '../../components/Burger';
+import { Spinner } from '../../components/UI';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../store/actions';
 import axios from '../../services/axios-orders';

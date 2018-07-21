@@ -1,11 +1,11 @@
 /** @format */
 
 import React, { Component } from 'react';
-import Spinner from '../../components/UI/Spinner/Spinner';
 import { connect } from 'react-redux';
 
-import Input from '../../components/UI/Input/Input';
-import Button from '../../components/UI/Button/Button';
+import { Input } from '../../components/UI';
+import { Spinner } from '../../components/UI';
+import { Button } from '../../components/UI';
 import classes from './Auth.css';
 import * as actions from '../../store/actions';
 import { Redirect } from 'react-router-dom';

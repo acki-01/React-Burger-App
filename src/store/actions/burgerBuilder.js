@@ -1,6 +1,6 @@
 /** @format */
 
-import * as actionTypes from './actionTypes';
+import * as actionTypes from '../constans/actionTypes';
 
 export const addIngredient = (name) => {
     return {

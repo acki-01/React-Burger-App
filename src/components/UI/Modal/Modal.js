@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 
 import classes from './Modal.css';
-import Backdrop from '../Backdrop/Backdrop';
+import { Backdrop } from '../';
 
 class Modal extends Component {
     shouldComponentUpdate(nextProps) {
