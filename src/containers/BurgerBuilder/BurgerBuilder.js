@@ -3,12 +3,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { Burger } from 'components/Burger';
-import { BuildControls } from 'components/Burger';
+import { BuildControls, Burger, OrderSummary } from 'components/Burger';
 import { Modal } from 'components/UI';
-import { OrderSummary } from 'components/Burger';
-import { Spinner } from 'components/UI';
-import { withErrorHandler } from 'hoc';
+import { withErrorHandler, withLoading } from 'hoc';
 import * as actions from 'store/actions';
 import axios from 'services/axios-orders';
 
@@ -60,9 +57,7 @@ class BurgerBuilder extends Component {
 
         let burger = this.props.error ? (
             <p>Ingredients cannot be loaded</p>
-        ) : (
-            <Spinner />
-        );
+        ) : null;
         if (this.props.ings) {
             burger = (
                 <React.Fragment>
@@ -126,4 +121,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps,
-)(withErrorHandler(BurgerBuilder, axios));
+)(withErrorHandler(withLoading(BurgerBuilder), axios));

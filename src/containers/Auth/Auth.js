@@ -4,9 +4,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
-import { Input } from 'components/UI';
-import { Spinner } from 'components/UI';
-import { Button } from 'components/UI';
+import { withLoading } from 'hoc';
+import { Button, Input } from 'components/UI';
 import classes from 'containers/Auth/Auth.css';
 import * as actions from 'store/actions';
 import { updateObject } from 'shared/utility';
@@ -105,10 +104,6 @@ class Auth extends Component {
             />
         ));
 
-        if (this.props.loading) {
-            form = <Spinner />;
-        }
-
         let errorMessage = null;
         if (this.props.error) {
             errorMessage = <p>{this.props.error.message}</p>;
@@ -156,4 +151,4 @@ const mapStateToProps = (state) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps,
-)(Auth);
+)(withLoading(Auth));

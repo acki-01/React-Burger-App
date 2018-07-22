@@ -3,12 +3,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { Button } from 'components/UI';
 import classes from 'containers/Checkout/ContactData/ContactData.css';
-import { Spinner } from 'components/UI';
-import { Input } from 'components/UI';
+import { Input, Button } from 'components/UI';
 import axios from 'services/axios-orders';
-import { withErrorHandler } from 'hoc';
+import { withErrorHandler, withLoading } from 'hoc';
 import * as actions from 'store/actions';
 import { updateObject } from 'shared/utility';
 import { checkValidity } from 'shared/validation';
@@ -167,9 +165,6 @@ class ContactData extends Component {
                 </Button>
             </form>
         );
-        if (this.props.loading) {
-            form = <Spinner />;
-        }
         return (
             <div className={classes.ContactData}>
                 <h4>Enter your contact data</h4>
@@ -199,4 +194,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps,
-)(withErrorHandler(ContactData, axios));
+)(withErrorHandler(withLoading(ContactData), axios));

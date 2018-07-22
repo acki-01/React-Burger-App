@@ -53,7 +53,7 @@
     },
     "scripts": {
         "start": "cross-env NODE_PATH=src:src/components:src/containers:src/hoc:src/assets:src/store:src/shared:src/hoc node scripts/start.js",
-        "build": "node scripts/build.js",
+        "build": "cross-env NODE_PATH=src node scripts/build.js",
         "test": "node scripts/test.js --env=jsdom"
     },
     "jest": {

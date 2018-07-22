@@ -5,22 +5,21 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import classes from './App.css';
-import { Layout } from '../hoc';
-import { BurgerBuilder } from '../containers/BurgerBuilder';
-import { Logout } from '../containers/Auth';
-import * as actions from '../store/actions';
-import { asyncComponent } from '../hoc';
+import { Layout, asyncComponent } from 'hoc';
+import { BurgerBuilder } from 'containers/BurgerBuilder';
+import { Logout } from 'containers/Auth';
+import * as actions from 'store/actions';
 
 const asyncCheckout = asyncComponent(() => {
-    return import('../containers/Checkout/Checkout');
+    return import('containers/Checkout/Checkout');
 });
 
 const asyncOrders = asyncComponent(() => {
-    return import('../containers/Orders/Orders');
+    return import('containers/Orders/Orders');
 });
 
 const asyncAuth = asyncComponent(() => {
-    return import('../containers/Auth/Auth');
+    return import('containers/Auth/Auth');
 });
 
 class App extends Component {

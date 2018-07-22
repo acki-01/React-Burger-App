@@ -10,6 +10,7 @@ import * as actions from 'store/actions';
 import { Spinner } from 'components/UI';
 
 class Orders extends Component {
+    //TODO apply withLoading HOC- cause infinite loop
     componentDidMount() {
         this.props.onFetchOrders(this.props.token, this.props.userId);
     }
