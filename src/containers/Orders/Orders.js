@@ -5,18 +5,19 @@ import { connect } from 'react-redux';
 
 import { Order } from 'components/Order';
 import axios from 'services/axios-orders';
-import { withErrorHandler } from 'hoc';
+import { withErrorHandler, withLoading } from 'hoc';
 import * as actions from 'store/actions';
-import { Spinner } from 'components/UI';
+// import { Spinner } from 'components/UI';
 
 class Orders extends Component {
-    //TODO apply withLoading HOC- cause infinite loop
     componentDidMount() {
-        this.props.onFetchOrders(this.props.token, this.props.userId);
+        if (this.props.orders && this.props.orders.length === 0) {
+            this.props.onFetchOrders(this.props.token, this.props.userId);
+        }
     }
     render() {
-        let orders = <Spinner />;
-        if (!this.props.loading) {
+        let orders = <p>No orders to display</p>;
+        if (this.props.orders.length > 0) {
             orders = this.props.orders.map((order) => {
                 return (
                     <Order
@@ -50,4 +51,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
     mapStateToProps,
     mapDispatchToProps,
-)(withErrorHandler(Orders, axios));
+)(withErrorHandler(withLoading(Orders), axios));
